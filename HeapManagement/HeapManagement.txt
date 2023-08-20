@@ -1,0 +1,16 @@
+
+//  I have used First Fit Allocation to demonstrate the heap management scheme. 
+    In First Fit , first we traverse through the memory and find the first free block whose size is larger than allocation one.
+//  For Allocation I have used allocate_first_fit_heap function and for Free I have used deallocate_heap function. 
+    To store the heap allocated information and heap free information, I used Doubly Linked List for fast traversals.
+//  And to make and add node to these allocated_heap and free_heap linked list, created a function for each respectively.
+//  Whenever the same process id node exist, it either asks to deallocate or cancel the process at the time of execution,
+    if deallocate is selected it deallocate the previous one and add the new one at valid position.
+//  Every time when function for allocate and free is called it rearranges both the linked list of heap and free memory as the valid
+    condition and if memory size exceeds or block is not present it shows the correct output and covers all the corner condition
+    and merges the blocks which are adjacent and free either previous blocks or next blocks.
+//  Deallocation or free is straight forward in the First Fit as it finds the process id through out the allocated heap list then 
+    deallocates it and then traverse through free heap and adds the free location, if adjacent blocks of free memory is there then merges
+    them accordingly.
+//  For output it allows to allocate,free(deallocate),view allocate list,view free list and exit. I took the memory size of 1024 units and 
+    it can be changed from the approcriate macros.
